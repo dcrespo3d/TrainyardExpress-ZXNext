@@ -1,0 +1,28 @@
+sprites.asm
+splash.asm
+tiles.asm
+player_data.asm
+page0.asm
+page1.asm
+
+trainyard.c
+
+
+; train.c
+; board.c
+; spmgr.c
+; level.c
+; design.c
+; print_tile.c
+; mouse.c
+; gui.c
+; io.c
+; screen_game.c
+
+; params.asm
+; setup_tilemap.asm
+; setup_sprites.asm
+; trackdefs.asm
+; train_sprites_def.asm
+; levels.asm
+

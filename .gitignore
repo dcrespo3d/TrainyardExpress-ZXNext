@@ -1,0 +1,6 @@
+bin/
+*.lis
+*.sym
+*.o
+page0.asm
+page1.asm

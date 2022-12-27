@@ -1,0 +1,5 @@
+SECTION SPLASH_ASM
+
+ORG $4000
+    ;DEFS $1B00, 0
+    INCBIN "splash.scr"
