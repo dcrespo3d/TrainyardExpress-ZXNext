@@ -5,7 +5,7 @@
 _level00:
     DEFB 0    ; stars
     DEFB 0    ; index of province
-    DEFB "Welcome!", 0
+    DEFB "Bienvenido!", 0
     DEFB $00
 
 ; index:  1  1
@@ -15,7 +15,7 @@ _level00:
 _level01:
     DEFB 1    ; stars
     DEFB 0    ; index of province
-    DEFB "Green Line", 0
+    DEFB "Linea Verde", 0
     DEFB $F8, $13, $15
     DEFB $E2, $53, $15
     DEFB $00
@@ -27,7 +27,7 @@ _level01:
 _level02:
     DEFB 1    ; stars
     DEFB 0    ; index of province
-    DEFB "The Three", 0
+    DEFB "Son Tres", 0
     DEFB $F4, $30, $14
     DEFB $F4, $21, $12
     DEFB $F4, $41, $11
@@ -43,7 +43,7 @@ _level02:
 _level03:
     DEFB 1    ; stars
     DEFB 0    ; index of province
-    DEFB "Pure Magic", 0
+    DEFB "Pura Magia", 0
     DEFB $F4, $30, $15
     DEFB $F8, $03, $15
     DEFB $E2, $63, $15
@@ -57,7 +57,7 @@ _level03:
 _level04:
     DEFB 0    ; stars
     DEFB 0    ; index of province
-    DEFB "Drawing Corners", 0
+    DEFB "Dibuja Esquinas", 0
     DEFB $00
 
 ; index:  5  5
@@ -67,7 +67,7 @@ _level04:
 _level05:
     DEFB 1    ; stars
     DEFB 0    ; index of province
-    DEFB "Two Liner", 0
+    DEFB "Dos Lineas", 0
     DEFB $E2, $31, $15
     DEFB $F1, $13, $15
     DEFB $E4, $53, $12
@@ -81,7 +81,7 @@ _level05:
 _level06:
     DEFB 1    ; stars
     DEFB 0    ; index of province
-    DEFB "The Little One", 0
+    DEFB "El Chiquitin", 0
     DEFB $F1, $33, $13
     DEFB $E4, $34, $13
     DEFB $00
@@ -93,7 +93,7 @@ _level06:
 _level10:
     DEFB 1    ; stars
     DEFB 1    ; index of province
-    DEFB "A Hard Place", 0
+    DEFB "Lugar Dificil", 0
     DEFB $F8, $03, $12
     DEFB $D0, $33
     DEFB $E2, $63, $12
@@ -106,7 +106,7 @@ _level10:
 _level11:
     DEFB 1    ; stars
     DEFB 1    ; index of province
-    DEFB "You Did", 0
+    DEFB "Lo Hiciste", 0
     DEFB $E8, $00, $14
     DEFB $F8, $02, $14
     DEFB $E2, $64, $12
@@ -132,7 +132,7 @@ _level11:
 _level12:
     DEFB 1    ; stars
     DEFB 1    ; index of province
-    DEFB "Traveller", 0
+    DEFB "Viajero", 0
     DEFB $F8, $00, $11
     DEFB $E3, $66, $11
     DEFB $D0, $30
@@ -150,7 +150,7 @@ _level12:
 _level13:
     DEFB 0    ; stars
     DEFB 1    ; index of province
-    DEFB "Fixing Mistakes", 0
+    DEFB "Arregla Errores", 0
     DEFB $00
 
 ; index: 11  B
@@ -160,7 +160,7 @@ _level13:
 _level14:
     DEFB 1    ; stars
     DEFB 1    ; index of province
-    DEFB "In The Middle", 0
+    DEFB "En Medio", 0
     DEFB $F1, $11, $13
     DEFB $F8, $22, $14
     DEFB $E2, $44, $14
@@ -174,7 +174,7 @@ _level14:
 _level15:
     DEFB 2    ; stars
     DEFB 1    ; index of province
-    DEFB "Foray", 0
+    DEFB "Incursion", 0
     DEFB $F8, $00, $14
     DEFB $F2, $60, $12
     DEFB $EF, $33, $44, $21, $50
@@ -189,7 +189,7 @@ _level15:
 _level16:
     DEFB 2    ; stars
     DEFB 1    ; index of province
-    DEFB "No Touching", 0
+    DEFB "No Tocar", 0
     DEFB $F4, $30, $12
     DEFB $E8, $03, $14
     DEFB $F2, $63, $14
@@ -203,7 +203,7 @@ _level16:
 _level17:
     DEFB 1    ; stars
     DEFB 1    ; index of province
-    DEFB "Two For Two", 0
+    DEFB "Dos Para Dos", 0
     DEFB $E1, $06, $25, $50
     DEFB $F1, $66, $25, $50
     DEFB $D0, $60
@@ -225,7 +225,7 @@ _level17:
 _level20:
     DEFB 0    ; stars
     DEFB 2    ; index of province
-    DEFB "Switching Track", 0
+    DEFB "Desviando Vias", 0
     DEFB $00
 
 ; index: 16 10
@@ -235,7 +235,7 @@ _level20:
 _level21:
     DEFB 2    ; stars
     DEFB 2    ; index of province
-    DEFB "Bluesy", 0
+    DEFB "Azulado", 0
     DEFB $E2, $11, $11
     DEFB $E8, $51, $11
     DEFB $F1, $35, $21, $10
@@ -248,7 +248,7 @@ _level21:
 _level22:
     DEFB 2    ; stars
     DEFB 2    ; index of province
-    DEFB "Lantern", 0
+    DEFB "Linterna", 0
     DEFB $E4, $31, $16
     DEFB $E1, $33, $15
     DEFB $F4, $34, $26, $50
@@ -261,7 +261,7 @@ _level22:
 _level23:
     DEFB 3    ; stars
     DEFB 2    ; index of province
-    DEFB "Boom Bah", 0
+    DEFB "Bom Bah", 0
     DEFB $E4, $60, $12
     DEFB $F4, $03, $24, $20
     DEFB $EF, $33, $24, $40
@@ -276,7 +276,7 @@ _level23:
 _level24:
     DEFB 3    ; stars
     DEFB 2    ; index of province
-    DEFB "Red Green", 0
+    DEFB "Rojiverde", 0
     DEFB $E4, $00, $12
     DEFB $E4, $20, $15
     DEFB $E4, $40, $12
@@ -291,7 +291,7 @@ _level24:
 _level30:
     DEFB 0    ; stars
     DEFB 3    ; index of province
-    DEFB "Merging Trains", 0
+    DEFB "Uniendo trenes", 0
     DEFB $00
 
 ; index: 21 15
@@ -301,7 +301,7 @@ _level30:
 _level31:
     DEFB 3    ; stars
     DEFB 3    ; index of province
-    DEFB "Yellow Triangle", 0
+    DEFB "Triangulo Amarillo", 0
     DEFB $F4, $00, $14
     DEFB $F4, $20, $14
     DEFB $E4, $60, $14
@@ -314,7 +314,7 @@ _level31:
 _level32:
     DEFB 3    ; stars
     DEFB 3    ; index of province
-    DEFB "Purpeller", 0
+    DEFB "Purpurado", 0
     DEFB $F4, $00, $13
     DEFB $F2, $64, $13
     DEFB $E4, $65, $13
@@ -333,7 +333,7 @@ _level32:
 _level33:
     DEFB 3    ; stars
     DEFB 3    ; index of province
-    DEFB "Reflection", 0
+    DEFB "Reflexion", 0
     DEFB $F4, $00, $12
     DEFB $E6, $60, $11
     DEFB $F4, $02, $12
@@ -349,7 +349,7 @@ _level33:
 _level34:
     DEFB 3    ; stars
     DEFB 3    ; index of province
-    DEFB "Combinellow", 0
+    DEFB "Juntarillo", 0
     DEFB $E4, $60, $14
     DEFB $F8, $02, $14
     DEFB $F8, $04, $14
@@ -373,7 +373,7 @@ _level34:
 _level35:
     DEFB 3    ; stars
     DEFB 3    ; index of province
-    DEFB "Colourize", 0
+    DEFB "Colorear", 0
     DEFB $F4, $00, $12
     DEFB $F1, $11, $11
     DEFB $E3, $66, $13
@@ -386,7 +386,7 @@ _level35:
 _level36:
     DEFB 3    ; stars
     DEFB 3    ; index of province
-    DEFB "Weighted Top", 0
+    DEFB "Cima Ponderada", 0
     DEFB $E4, $30, $15
     DEFB $F2, $23, $21, $10
     DEFB $F8, $43, $24, $40
@@ -401,7 +401,7 @@ _level36:
 _level40:
     DEFB 0    ; stars
     DEFB 4    ; index of province
-    DEFB "Mixing", 0
+    DEFB "Mezclando", 0
     DEFB $00
 
 ; index: 28 1C
@@ -411,7 +411,7 @@ _level40:
 _level41:
     DEFB 3    ; stars
     DEFB 4    ; index of province
-    DEFB "Embrace", 0
+    DEFB "Aceptacion", 0
     DEFB $F4, $00, $11
     DEFB $E4, $30, $13
     DEFB $E1, $36, $13
@@ -425,7 +425,7 @@ _level41:
 _level42:
     DEFB 4    ; stars
     DEFB 4    ; index of province
-    DEFB "Pee Gee", 0
+    DEFB "Pe Ge", 0
     DEFB $F8, $00, $14
     DEFB $F2, $60, $11
     DEFB $E8, $02, $13
@@ -442,7 +442,7 @@ _level42:
 _level43:
     DEFB 4    ; stars
     DEFB 4    ; index of province
-    DEFB "Autumn", 0
+    DEFB "Octubre", 0
     DEFB $F4, $20, $12
     DEFB $E4, $40, $16
     DEFB $F1, $26, $14
@@ -456,7 +456,7 @@ _level43:
 _level44:
     DEFB 4    ; stars
     DEFB 4    ; index of province
-    DEFB "Unscathed", 0
+    DEFB "Indemne", 0
     DEFB $E8, $01, $12
     DEFB $F8, $02, $11
     DEFB $F8, $04, $12
@@ -476,7 +476,7 @@ _level44:
 _level45:
     DEFB 5    ; stars
     DEFB 4    ; index of province
-    DEFB "Challenger", 0
+    DEFB "Aspirante", 0
     DEFB $F4, $30, $21, $20
     DEFB $E8, $03, $15
     DEFB $E2, $63, $16
@@ -490,7 +490,7 @@ _level45:
 _level46:
     DEFB 5    ; stars
     DEFB 4    ; index of province
-    DEFB "Please Wait", 0
+    DEFB "Puedes esperar?", 0
     DEFB $F2, $11, $12
     DEFB $E2, $46, $13
     DEFB $F1, $66, $11
@@ -549,7 +549,7 @@ _level51:
 _level52:
     DEFB 5    ; stars
     DEFB 5    ; index of province
-    DEFB "Sunburst", 0
+    DEFB "Rayos de Sol", 0
     DEFB $F4, $31, $14
     DEFB $F8, $13, $14
     DEFB $EF, $33, $14
@@ -564,7 +564,7 @@ _level52:
 _level53:
     DEFB 6    ; stars
     DEFB 5    ; index of province
-    DEFB "Pea Shooter", 0
+    DEFB "Lanzaguisantes", 0
     DEFB $F1, $03, $11
     DEFB $F1, $13, $11
     DEFB $F4, $23, $14
@@ -579,7 +579,7 @@ _level53:
 _level54:
     DEFB 6    ; stars
     DEFB 5    ; index of province
-    DEFB "Scarab", 0
+    DEFB "Escarabajo", 0
     DEFB $E4, $00, $15
     DEFB $E4, $60, $15
     DEFB $F4, $32, $11
@@ -597,7 +597,7 @@ _level54:
 _level60:
     DEFB 6    ; stars
     DEFB 6    ; index of province
-    DEFB "Prancing", 0
+    DEFB "Cabriolas", 0
     DEFB $F8, $00, $11
     DEFB $F2, $60, $12
     DEFB $F8, $51, $13
@@ -614,7 +614,7 @@ _level60:
 _level61:
     DEFB 7    ; stars
     DEFB 6    ; index of province
-    DEFB "Box Seven", 0
+    DEFB "Caja Siete", 0
     DEFB $F8, $00, $22, $40
     DEFB $F8, $01, $21, $10
     DEFB $E8, $05, $15
@@ -638,7 +638,7 @@ _level61:
 _level62:
     DEFB 7    ; stars
     DEFB 6    ; index of province
-    DEFB "Sapling", 0
+    DEFB "Brotes", 0
     DEFB $E8, $00, $12
     DEFB $E2, $60, $11
     DEFB $E8, $06, $12
@@ -652,7 +652,7 @@ _level62:
 _level63:
     DEFB 8    ; stars
     DEFB 6    ; index of province
-    DEFB "Match Up", 0
+    DEFB "Emparejar", 0
     DEFB $E4, $00, $13
     DEFB $E4, $60, $16
     DEFB $F2, $33, $11
@@ -668,7 +668,7 @@ _level63:
 _level64:
     DEFB 7    ; stars
     DEFB 6    ; index of province
-    DEFB "Being Green", 0
+    DEFB "Ser Verde", 0
     DEFB $F1, $11, $11
     DEFB $E1, $51, $15
     DEFB $F1, $02, $11
@@ -694,7 +694,7 @@ _level64:
 _level65:
     DEFB 8    ; stars
     DEFB 6    ; index of province
-    DEFB "Casualty", 0
+    DEFB "Victima", 0
     DEFB $E4, $40, $14
     DEFB $F8, $02, $12
     DEFB $F2, $62, $11
@@ -712,7 +712,7 @@ _level65:
 _level70:
     DEFB 0    ; stars
     DEFB 7    ; index of province
-    DEFB "Painter Pieces", 0
+    DEFB "Casillas Pintoras", 0
     DEFB $00
 
 ; index: 46 2E
@@ -722,7 +722,7 @@ _level70:
 _level71:
     DEFB 8    ; stars
     DEFB 7    ; index of province
-    DEFB "Niner", 0
+    DEFB "Novena", 0
     DEFB $F1, $32, $12
     DEFB $E8, $03, $15
     DEFB $B5, $23, $14
@@ -739,7 +739,7 @@ _level71:
 _level72:
     DEFB 8    ; stars
     DEFB 7    ; index of province
-    DEFB "Teamwork", 0
+    DEFB "Trabajo en Equipo", 0
     DEFB $BA, $30, $13
     DEFB $EA, $31, $13
     DEFB $F1, $35, $15
@@ -755,7 +755,7 @@ _level72:
 _level73:
     DEFB 8    ; stars
     DEFB 7    ; index of province
-    DEFB "Return Policing", 0
+    DEFB "Pido Retorno", 0
     DEFB $D0, $60
     DEFB $D0, $51
     DEFB $D0, $42
@@ -774,7 +774,7 @@ _level73:
 _level74:
     DEFB 8    ; stars
     DEFB 7    ; index of province
-    DEFB "Formatic", 0
+    DEFB "Cuatromatico", 0
     DEFB $B5, $23, $14
     DEFB $F1, $33, $42, $22, $20
     DEFB $B5, $43, $11
@@ -788,7 +788,7 @@ _level74:
 _level75:
     DEFB 9    ; stars
     DEFB 7    ; index of province
-    DEFB "Rainbow Arrow", 0
+    DEFB "Flecha Arcoiris", 0
     DEFB $BA, $31, $12
     DEFB $E2, $61, $11
     DEFB $BA, $32, $14
@@ -808,7 +808,7 @@ _level75:
 _level80:
     DEFB 8    ; stars
     DEFB 8    ; index of province
-    DEFB "One Way", 0
+    DEFB "Una Direccion", 0
     DEFB $F2, $61, $11
     DEFB $E8, $03, $15
     DEFB $BA, $23, $12
@@ -824,7 +824,7 @@ _level80:
 _level81:
     DEFB 9    ; stars
     DEFB 8    ; index of province
-    DEFB "Roundabout", 0
+    DEFB "Rotonda", 0
     DEFB $F1, $31, $14
     DEFB $F2, $13, $12
     DEFB $E4, $33, $45, $53, $30
@@ -842,7 +842,7 @@ _level81:
 _level82:
     DEFB 9    ; stars
     DEFB 8    ; index of province
-    DEFB "Chromashift", 0
+    DEFB "Coloreando", 0
     DEFB $F1, $12, $15
     DEFB $BA, $32, $12
     DEFB $F1, $52, $11
@@ -861,7 +861,7 @@ _level82:
 _level83:
     DEFB 9    ; stars
     DEFB 8    ; index of province
-    DEFB "Balsam", 0
+    DEFB "Balsamo", 0
     DEFB $E1, $32, $23, $30
     DEFB $F4, $33, $82, $22, $21, $11, $10
     DEFB $00
@@ -888,7 +888,7 @@ _level84:
 _level90:
     DEFB 8    ; stars
     DEFB 9    ; index of province
-    DEFB "Taxing", 0
+    DEFB "Exigente", 0
     DEFB $F8, $00, $11
     DEFB $E6, $60, $15
     DEFB $F4, $01, $14
@@ -904,7 +904,7 @@ _level90:
 _level91:
     DEFB 9    ; stars
     DEFB 9    ; index of province
-    DEFB "Dousing The Flame", 0
+    DEFB "Sofocar la Llama", 0
     DEFB $F4, $00, $12
     DEFB $D0, $10
     DEFB $F4, $20, $12
@@ -948,7 +948,7 @@ _level92:
 _level93:
     DEFB 9    ; stars
     DEFB 9    ; index of province
-    DEFB "Pals", 0
+    DEFB "Coleguis", 0
     DEFB $E8, $00, $25, $60
     DEFB $E2, $60, $23, $60
     DEFB $F2, $13, $24, $40
@@ -963,7 +963,7 @@ _level93:
 _level94:
     DEFB 10    ; stars
     DEFB 9    ; index of province
-    DEFB "Refresh", 0
+    DEFB "Refrescar", 0
     DEFB $E8, $02, $13
     DEFB $BA, $32, $12
     DEFB $F2, $62, $14
@@ -981,7 +981,7 @@ _level94:
 _levelA0:
     DEFB 8    ; stars
     DEFB 10    ; index of province
-    DEFB "Partnership", 0
+    DEFB "Asociacion", 0
     DEFB $E2, $10, $15
     DEFB $E4, $30, $13
     DEFB $E8, $50, $16
@@ -996,7 +996,7 @@ _levelA0:
 _levelA1:
     DEFB 9    ; stars
     DEFB 10    ; index of province
-    DEFB "Impact", 0
+    DEFB "Impacto", 0
     DEFB $E4, $30, $43, $33, $30
     DEFB $F8, $03, $42, $22, $20
     DEFB $F2, $63, $41, $11, $10
@@ -1010,7 +1010,7 @@ _levelA1:
 _levelA2:
     DEFB 10    ; stars
     DEFB 10    ; index of province
-    DEFB "Reciprocate", 0
+    DEFB "Reciprocidad", 0
     DEFB $F1, $02, $16
     DEFB $E1, $12, $13
     DEFB $E1, $52, $15
@@ -1031,7 +1031,7 @@ _levelA2:
 _levelA3:
     DEFB 10    ; stars
     DEFB 10    ; index of province
-    DEFB "Sibilant", 0
+    DEFB "Sibilante", 0
     DEFB $E8, $00, $15
     DEFB $F4, $40, $11
     DEFB $F4, $50, $11
@@ -1051,7 +1051,7 @@ _levelA3:
 _levelA4:
     DEFB 10    ; stars
     DEFB 10    ; index of province
-    DEFB "Moonbeams", 0
+    DEFB "Rayos de Luna", 0
     DEFB $BA, $20, $15
     DEFB $BA, $40, $11
     DEFB $D0, $21
@@ -1068,7 +1068,7 @@ _levelA4:
 _levelB0:
     DEFB 5    ; stars
     DEFB 11    ; index of province
-    DEFB "Snowracer", 0
+    DEFB "Carrera de Nieve", 0
     DEFB $E2, $60, $12
     DEFB $E2, $61, $14
     DEFB $E2, $62, $11
@@ -1092,7 +1092,7 @@ _levelB0:
 _levelB1:
     DEFB 9    ; stars
     DEFB 11    ; index of province
-    DEFB "Right of Passage", 0
+    DEFB "Derecho de Paso", 0
     DEFB $F4, $10, $11
     DEFB $D0, $20
     DEFB $E4, $30, $25, $30
@@ -1110,7 +1110,7 @@ _levelB1:
 _levelB2:
     DEFB 10    ; stars
     DEFB 11    ; index of province
-    DEFB "Midland", 0
+    DEFB "Tierra Media", 0
     DEFB $E4, $20, $14
     DEFB $E4, $30, $14
     DEFB $E4, $40, $14
@@ -1133,7 +1133,7 @@ _levelB2:
 _levelB3:
     DEFB 10    ; stars
     DEFB 11    ; index of province
-    DEFB "Down Under", 0
+    DEFB "Por Debajo", 0
     DEFB $F1, $12, $12
     DEFB $F1, $22, $13
     DEFB $F1, $32, $11
@@ -1153,7 +1153,7 @@ _levelB3:
 _levelB4:
     DEFB 10    ; stars
     DEFB 11    ; index of province
-    DEFB "Lamport", 0
+    DEFB "Lampuerto", 0
     DEFB $E4, $00, $15
     DEFB $F4, $10, $14
     DEFB $F4, $30, $14
@@ -1180,7 +1180,7 @@ _levelB4:
 _levelC0:
     DEFB 8    ; stars
     DEFB 12    ; index of province
-    DEFB "Jumping Joy", 0
+    DEFB "Alegre Salto", 0
     DEFB $EA, $30, $14
     DEFB $F2, $22, $11
     DEFB $F8, $42, $11
@@ -1199,7 +1199,7 @@ _levelC0:
 _levelC1:
     DEFB 10    ; stars
     DEFB 12    ; index of province
-    DEFB "Sidewinder", 0
+    DEFB "Camarada", 0
     DEFB $F1, $02, $12
     DEFB $F1, $04, $12
     DEFB $F1, $06, $12
@@ -1223,7 +1223,7 @@ _levelC1:
 _levelC2:
     DEFB 10    ; stars
     DEFB 12    ; index of province
-    DEFB "Dufferin Gate", 0
+    DEFB "Puerta Zoquete", 0
     DEFB $E8, $00, $11
     DEFB $E2, $60, $14
     DEFB $F8, $03, $42, $22, $20
@@ -1245,7 +1245,7 @@ _levelC2:
 _levelC3:
     DEFB 11    ; stars
     DEFB 12    ; index of province
-    DEFB "Entanglement", 0
+    DEFB "Entrelazamiento", 0
     DEFB $E4, $00, $15
     DEFB $E4, $30, $16
     DEFB $F4, $60, $43, $33, $30

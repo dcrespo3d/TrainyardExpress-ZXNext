@@ -67,7 +67,7 @@ void st_init_btn_next()
     guibutton_draw(&st_btn_next);
     print_set_color(CTEXT_WHI);
     print_set_pos_inc(1, 2);
-    println_ctr("NEXT", 8);
+    println_ctr("SEGUIR", 8);
 }
 
 void st_init_btn_skip()
@@ -77,7 +77,7 @@ void st_init_btn_skip()
     guibutton_draw(&st_btn_skip);
     print_set_color(CTEXT_WHI);
     print_set_pos_inc(1, 2);
-    println_ctr("Skip", 8);
+    println_ctr("Saltar", 8);
 }
 
 void st_hide_btn_next()
@@ -133,8 +133,8 @@ void st_init_btn_again()
     guibutton_draw(&st_btn_again);
     print_set_color(CTEXT_WHI);
     print_set_pos_inc(1, 2);
-    println_ctr("WATCH", 8);
-    println_ctr("AGAIN", 8);
+    println_ctr("VOLVER", 8);
+    println_ctr("A VER", 8);
 }
 
 void st_init_btn_puzzle()
@@ -144,7 +144,7 @@ void st_init_btn_puzzle()
     guibutton_draw(&st_btn_puzzle);
     print_set_color(CTEXT_WHI);
     print_set_pos_inc(1, 2);
-    println_ctr("NEXT", 8);
+    println_ctr("OTRO", 8);
     println_ctr("PUZZLE", 8);
 }
 
@@ -473,7 +473,7 @@ void st_update_0()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("Welcome to");
+        st_println_ctr_20("Bienvenido a");
         st_println_ctr_20("Trainyard!");
 
         return;
@@ -482,9 +482,9 @@ void st_update_0()
     if (tut_frame == T01) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 14, 22, 6);
-        st_println_ctr_20("This tutorial will");
-        st_println_ctr_20("explain how to");
-        st_println_ctr_20("solve puzzles");
+        st_println_ctr_20("Este tutorial");
+        st_println_ctr_20("explica como");
+        st_println_ctr_20("resolver puzzles");
 
         return;
     }
@@ -494,9 +494,9 @@ void st_update_0()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 22, 22, 6);
-        st_println_ctr_20("Press NEXT to");
-        st_println_ctr_20("advance through");
-        st_println_ctr_20("the steps");
+        st_println_ctr_20("Pulsa SEGUIR");
+        st_println_ctr_20("para avanzar al");
+        st_println_ctr_20("siguiente paso");
 
         st_init_btn_skip();
         st_init_btn_next();
@@ -520,9 +520,9 @@ void st_update_0()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 5, 22, 5);
-        st_println_ctr_20("OUTLET stations");
-        st_println_ctr_20("have a PLUS ");
-        st_println_ctr_20("symbol on them");
+        st_println_ctr_20("Las estaciones");
+        st_println_ctr_20("ORIGEN llevan");
+        st_println_ctr_20("una CRUZ");
         return;
     }
 
@@ -531,9 +531,9 @@ void st_update_0()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 24, 22, 5);
-        st_println_ctr_20("GOAL stations");
-        st_println_ctr_20("have a CIRCLE");
-        st_println_ctr_20("on them");
+        st_println_ctr_20("Las estaciones");
+        st_println_ctr_20("DESTINO llevan");
+        st_println_ctr_20("un CIRCULO");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -549,9 +549,9 @@ void st_update_0()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 5, 22, 5);
-        st_println_ctr_20("You've gotta get");
-        st_println_ctr_20("the GREEN train from");
-        st_println_ctr_20("this OUTLET station");
+        st_println_ctr_20("Tienes que llevar");
+        st_println_ctr_20("el tren VERDE desde");
+        st_println_ctr_20("la estacion ORIGEN");
 
         return;
     }
@@ -560,9 +560,9 @@ void st_update_0()
         spmgr_show_tally(st_tut0_tally2);
 
         print_set_symbol(BLOCK_OUTER_BORDER);
-        print_frame_filled(4, 24, 22, 5);
+        print_frame_filled(3, 24, 24, 5);
         println("");
-        st_println_ctr_20("to this GOAL station");
+        println_ctr("a la estacion DESTINO", 22);
 
         st_init_btn_next();
         inc_frame = 0;
@@ -579,10 +579,10 @@ void st_update_0()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(3, 4, 24, 6);
-        println_ctr("Your job is", 22);
-        println_ctr("to draw track.", 22);
-        println_ctr("You'll use the cursor", 22);
-        println_ctr("to drag a line", 22);
+        println_ctr("Tu trabajo es", 22);
+        println_ctr("dibujar las vias.", 22);
+        println_ctr("Usaras el cursor para", 22);
+        println_ctr("arrastrar una linea.", 22);
 
         st_set_fake_cursor(BOARD_CTR_X(1), BOARD_CTR_Y(3));
         st_fake_press_l();
@@ -598,10 +598,10 @@ void st_update_0()
     if (tut_frame == T09) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(3, 24, 24, 6);
-        println_ctr("You can draw as much", 22);
-        println_ctr("track as you want.", 22);
-        println_ctr("There's no limit", 22);
-        println_ctr("or score", 22);
+        println_ctr("Puedes dibjar tanta", 22);
+        println_ctr("via como quieras.", 22);
+        println_ctr("No hay limite", 22);
+        println_ctr("o puntuacion.", 22);
 
         st_init_btn_next();
         inc_frame = 0;
@@ -620,8 +620,8 @@ void st_update_0()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(6, 4, 18, 6);
         println("");
-        println_ctr("Let's watch", 16);
-        println_ctr("the train go...", 16);
+        println_ctr("Veamos al tren", 16);
+        println_ctr("circular...", 16);
 
         return;
     }
@@ -636,7 +636,7 @@ void st_update_0()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(6, 24, 18, 5);
         println("");
-        println_ctr("Yay!", 16);
+        println_ctr("Siii!", 16);
 
         tut_frame ++;
         inc_frame = 0;
@@ -717,10 +717,10 @@ void st_update_4()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 4, 22, 6);
-        st_println_ctr_20("To draw a corner,");
-        st_println_ctr_20("drag the cursor from");
-        st_println_ctr_20("one side and exit");
-        st_println_ctr_20("from another side");
+        st_println_ctr_20("Para hacer una");
+        st_println_ctr_20("esquina, arrastra el");
+        st_println_ctr_20("cursor desde un lado");
+        st_println_ctr_20("y sal por el otro");
 
         return;
     }
@@ -750,7 +750,7 @@ void st_update_4()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 25, 22, 5);
         println("");
-        st_println_ctr_20("Ta da!");
+        st_println_ctr_20("Tachan!");
 
         st_fake_release_l();
         st_init_btn_next();
@@ -773,8 +773,8 @@ void st_update_4()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(2, 6, 18, 6);
         println("");
-        println_ctr("Let's look at", 16);
-        println_ctr("an actual puzzle", 16);
+        println_ctr("Vamos a ver", 16);
+        println_ctr("un puzzle real", 16);
 
         return;
     }
@@ -785,9 +785,9 @@ void st_update_4()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(2, 14, 18, 6);
-        println_ctr("The WHITE side", 16);
-        println_ctr("of a GOAL is", 16);
-        println_ctr("the IN side", 16);
+        println_ctr("El lado BLANCO", 16);
+        println_ctr("de un DESTINO", 16);
+        println_ctr("es la ENTRADA", 16);
 
         st_init_btn_next();
         inc_frame = 0;
@@ -846,7 +846,7 @@ void st_update_4()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(6, 9, 10, 5);
         println("");
-        println_ctr(" Nice!", 8);
+        println_ctr(" Bien!", 8);
 
         tut_frame ++;
         inc_frame = 0;
@@ -906,9 +906,9 @@ void st_update_10()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("Sometimes when you");
-        st_println_ctr_20("draw you'll make");
-        st_println_ctr_20("a few mistakes");
+        st_println_ctr_20("A veces, cuando");
+        st_println_ctr_20("dibujes, cometeras");
+        st_println_ctr_20("algunos errores");
 
         return;
     }
@@ -968,10 +968,10 @@ void st_update_10()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("What a mess!");
-        st_println_ctr_20("Let's clean it");
-        st_println_ctr_20("up by drawing");
-        st_println_ctr_20("over it again");
+        st_println_ctr_20("Que desastre!");
+        st_println_ctr_20("Vamos a arreglarlo");
+        st_println_ctr_20("dibujando otra vez");
+        st_println_ctr_20("por encima");
 
         return;
     }
@@ -1006,9 +1006,9 @@ void st_update_10()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("If we draw over it");
-        st_println_ctr_20("one more time,");
-        st_println_ctr_20("it'll be perfect");
+        st_println_ctr_20("Si dibujamos por");
+        st_println_ctr_20("encima otra vez,");
+        st_println_ctr_20("sera perfecto");
 
         return;
     }
@@ -1048,8 +1048,8 @@ void st_update_10()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 4, 22, 6);
         println("");
-        st_println_ctr_20("Let's look at why");
-        st_println_ctr_20("this technique works");
+        st_println_ctr_20("Veamos porque esta");
+        st_println_ctr_20("tecnica funciona");
 
         return;
     }
@@ -1058,9 +1058,9 @@ void st_update_10()
     if (tut_frame == T2I) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 12, 22, 6);
-        st_println_ctr_20("Every tile can hold");
-        st_println_ctr_20("only TWO pieces of");
-        st_println_ctr_20("track at a time");
+        st_println_ctr_20("Cada casilla puede");
+        st_println_ctr_20("alojar dos trozos");
+        st_println_ctr_20("de via a la vez");
 
         return;
     }
@@ -1159,9 +1159,9 @@ void st_update_10()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 4, 22, 6);
-        st_println_ctr_20("If we draw");
-        st_println_ctr_20("the same way");
-        st_println_ctr_20("twice in a row...");
+        st_println_ctr_20("Si dibujamos de");
+        st_println_ctr_20("igual forma dos");
+        st_println_ctr_20("veces seguidas...");
 
         return;
     }
@@ -1190,9 +1190,9 @@ void st_update_10()
     if (tut_frame == T2a) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 12, 22, 6);
-        st_println_ctr_20("...it'll become");
-        st_println_ctr_20("a single track");
-        st_println_ctr_20("piece again");
+        st_println_ctr_20("...se convertira");
+        st_println_ctr_20("en una via unica");
+        st_println_ctr_20("de nuevo");
         return;
     }
 
@@ -1223,9 +1223,9 @@ void st_update_10()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("You can ERASE track");
-        st_println_ctr_20("using the RIGHT /");
-        st_println_ctr_20("SECONDARY button");
+        st_println_ctr_20("Puedes BORRAR vias");
+        st_println_ctr_20("usando el boton");
+        st_println_ctr_20("DERECHO / SECUNDARIO");
 
         return;
     }
@@ -1278,10 +1278,10 @@ void st_update_10()
     #define T2k T2j + DT2
     if (tut_frame == T2k) {
         print_set_symbol(BLOCK_OUTER_BORDER);
-        print_frame_filled(4, 14, 22, 6);
-        st_println_ctr_20("Don't forget about");
-        st_println_ctr_20("UNDO. You can even");
-        st_println_ctr_20("DELETE all tracks!");
+        print_frame_filled(3, 14, 24, 6);
+        println_ctr("No te olvides del UNDO", 22);
+        println_ctr("(deshacer).Y se pueden", 22);
+        println_ctr("BORRAR todas las vias!", 22);
 
         return;
     }
@@ -1290,9 +1290,9 @@ void st_update_10()
     if (tut_frame == T2l) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 22, 22, 6);
-        st_println_ctr_20("Now you've got");
-        st_println_ctr_20("lots of ways");
-        st_println_ctr_20("to fix mistakes");
+        st_println_ctr_20("Ahora tienes muchas");
+        st_println_ctr_20("formas de arreglar");
+        st_println_ctr_20("los errores");
 
         tut_frame ++;
         inc_frame = 0;
@@ -1372,8 +1372,8 @@ void st_update_15()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 10, 22, 6);
         println("");
-        st_println_ctr_20("Let's learn about");
-        st_println_ctr_20("SWITCHING TRACK");
+        st_println_ctr_20("Vamos a aprender");
+        st_println_ctr_20("cosas sobre DESVIOS");
 
         return;
     }
@@ -1382,10 +1382,10 @@ void st_update_15()
     if (tut_frame == T31) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 18, 22, 6);
-        st_println_ctr_20("SWITCHING TRACK");
-        st_println_ctr_20("is one of the");
-        st_println_ctr_20("key concepts");
-        st_println_ctr_20("in Trainyard");
+        st_println_ctr_20("El DESVIO");
+        st_println_ctr_20("es uno de los");
+        st_println_ctr_20("conceptos clave");
+        st_println_ctr_20("en Trainyard");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -1404,10 +1404,10 @@ void st_update_15()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(2, 6, 22, 6);
-        st_println_ctr_20("This is an");
-        st_println_ctr_20("OUTLET station");
-        st_println_ctr_20("with TWO RED");
-        st_println_ctr_20("trains in it");
+        st_println_ctr_20("Esta es una");
+        st_println_ctr_20("estacion de SALIDA");
+        st_println_ctr_20("con DOS trenes ROJOS");
+        st_println_ctr_20("en ella");
 
         spmgr_show_tally(st_tut3_tally0);
 
@@ -1493,7 +1493,7 @@ void st_update_15()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("Cool!");
+        st_println_ctr_20("Genial!");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -1515,10 +1515,10 @@ void st_update_15()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("The ACTIVE track");
-        st_println_ctr_20("is brighter and");
-        st_println_ctr_20("it's layered above");
-        st_println_ctr_20("the PASSIVE track");
+        st_println_ctr_20("La via ACTIVA es");
+        st_println_ctr_20("mas brillante y");
+        st_println_ctr_20("esta por encima de");
+        st_println_ctr_20("la via PASIVA");
 
         return;
     }
@@ -1527,9 +1527,9 @@ void st_update_15()
     if (tut_frame == T3F) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 24, 22, 5);
-        st_println_ctr_20("Trains will always");
-        st_println_ctr_20("take the ACTIVE");
-        st_println_ctr_20("track if they can");
+        st_println_ctr_20("Los trenes siempre");
+        st_println_ctr_20("iran por la via");
+        st_println_ctr_20("ACTIVA si pueden");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -1544,10 +1544,10 @@ void st_update_15()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("You can switch");
-        st_println_ctr_20("the track from");
-        st_println_ctr_20("PASSIVE to ACTIVE");
-        st_println_ctr_20("by drawing over it");
+        st_println_ctr_20("Puedes cambiar");
+        st_println_ctr_20("la via de");
+        st_println_ctr_20("PASIVA a ACTIVA");
+        st_println_ctr_20("dibujando por encima");
 
         return;
     }
@@ -1594,10 +1594,10 @@ void st_update_15()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("You can also switch");
-        st_println_ctr_20("tracks with a simple");
-        st_println_ctr_20("DOUBLE CLICK or");
-        st_println_ctr_20("DOUBLE PRESS");
+        st_println_ctr_20("Hasta puedes cambiar");
+        st_println_ctr_20("vias con un sencillo");
+        st_println_ctr_20("DOBLE CLICK o");
+        st_println_ctr_20("DOBLE PULSACION");
     }
 
     #define T3M T3L + DT32
@@ -1663,10 +1663,10 @@ void st_update_15()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("The most important");
-        st_println_ctr_20("part: trains switch");
-        st_println_ctr_20("the track when");
-        st_println_ctr_20("they go over it");
+        st_println_ctr_20("Lo mas importante:");
+        st_println_ctr_20("los trenes CAMBIAN");
+        st_println_ctr_20("la via cuando");
+        st_println_ctr_20("pasan por encima");
         return;
     }
 
@@ -1746,7 +1746,7 @@ void st_update_15()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 8, 22, 5);
         println("");
-        st_println_ctr_20("Uh oh!");
+        st_println_ctr_20("Vaya!");
 
         return;
     }
@@ -1812,8 +1812,8 @@ void st_update_15()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("Ah ha!");
-        st_println_ctr_20("That's better!");
+        st_println_ctr_20("Aja!");
+        st_println_ctr_20("Asi esta mejor!");
 
         tut_frame ++;
         inc_frame = 0;
@@ -1926,10 +1926,10 @@ void st_update_20()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(2, 6, 22, 6);
-        st_println_ctr_20("Notice that there");
-        st_println_ctr_20("are TWO yellow");
-        st_println_ctr_20("trains starting");
-        st_println_ctr_20("on this side...");
+        st_println_ctr_20("Observa que hay");
+        st_println_ctr_20("DOS trenes");
+        st_println_ctr_20("amarillos saliendo");
+        st_println_ctr_20("desde este lado...");
 
         return;
     }
@@ -1939,10 +1939,10 @@ void st_update_20()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(10, 22, 18, 6);
-        println_ctr("but this", 16);
-        println_ctr("GOAL station", 16);
-        println_ctr("only wants", 16);
-        println_ctr("ONE train", 16);
+        println_ctr("pero esta", 16);
+        println_ctr("estacion DESTINO", 16);
+        println_ctr("solo necesita", 16);
+        println_ctr("UN tren", 16);
 
         st_init_btn_next();
         inc_frame = 0;
@@ -1961,10 +1961,10 @@ void st_update_20()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("Let's see what");
-        st_println_ctr_20("happens if we");
-        st_println_ctr_20("solve it like");
-        st_println_ctr_20("we usually would");
+        st_println_ctr_20("Veamos que pasa si");
+        st_println_ctr_20("lo resolvemos");
+        st_println_ctr_20("como normalmente");
+        st_println_ctr_20("lo hariamos");
 
         return;
     }
@@ -2032,10 +2032,10 @@ void st_update_20()
     if (tut_frame == T4D) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("That was almost");
-        st_println_ctr_20("good, but we");
-        st_println_ctr_20("WASTED the second");
-        st_println_ctr_20("yellow train");
+        st_println_ctr_20("Eso casi estuvo bien");
+        st_println_ctr_20("pero el segundo tren");
+        st_println_ctr_20("amarillo lo hemos");
+        st_println_ctr_20("DESPERDICIADO");
 
         return;
     }
@@ -2043,10 +2043,10 @@ void st_update_20()
     if (tut_frame == T4E) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 24, 22, 6);
-        st_println_ctr_20("In Trainyard, you");
-        st_println_ctr_20("must use ALL of the");
-        st_println_ctr_20("trains and not let");
-        st_println_ctr_20("any of them CRASH");
+        st_println_ctr_20("En Trainyard, debes");
+        st_println_ctr_20("usar TODOS los");
+        st_println_ctr_20("trenes y no dejar");
+        st_println_ctr_20("que ninguno CHOQUE");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -2069,10 +2069,10 @@ void st_update_20()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("This time, we'll");
-        st_println_ctr_20("time the trains so");
-        st_println_ctr_20("that they MERGE");
-        st_println_ctr_20("into ONE train");
+        st_println_ctr_20("Esta vez, temporiza-");
+        st_println_ctr_20("remos los trenes");
+        st_println_ctr_20("para que se JUNTEN");
+        st_println_ctr_20("en UN SOLO tren");
 
         return;
     }
@@ -2145,7 +2145,7 @@ void st_update_20()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("Hurray!");
+        st_println_ctr_20("Que bueno!");
 
         tut_frame ++;
         inc_frame = 0;
@@ -2222,10 +2222,10 @@ void st_update_27()
     if (tut_frame == T51) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(2, 10, 26, 6);
-        println_ctr("By now, you've", 24);
-        println_ctr("discovered that you can", 24);
-        println_ctr("MIX colours by MERGING", 24);
-        println_ctr("trains together", 24);
+        println_ctr("Hasta ahora, has", 24);
+        println_ctr("descubierto que puedes", 24);
+        println_ctr("MEZCLAR colores", 24);
+        println_ctr("UNIENDO trenes", 24);
 
         return;
     }
@@ -2234,10 +2234,10 @@ void st_update_27()
     if (tut_frame == T52) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 18, 22, 6);
-        st_println_ctr_20("In this tutorial,");
-        st_println_ctr_20("you'll learn two");
-        st_println_ctr_20("more MIXING");
-        st_println_ctr_20("techniques");
+        st_println_ctr_20("En este tutorial,");
+        st_println_ctr_20("aprenderas dos");
+        st_println_ctr_20("nuevas tecnicas");
+        st_println_ctr_20("de MEZCLA");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -2256,10 +2256,10 @@ void st_update_27()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("Let's start with");
-        st_println_ctr_20("MERGING, which");
-        st_println_ctr_20("you're probably");
-        st_println_ctr_20("used to by now");
+        st_println_ctr_20("Empecemos UNIENDO,");
+        st_println_ctr_20("algo a lo que");
+        st_println_ctr_20("probablemente ya");
+        st_println_ctr_20("te has acostumbrado");
 
         return;
     }
@@ -2344,10 +2344,10 @@ void st_update_27()
     if (tut_frame == T5F) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("Notice that");
-        st_println_ctr_20("MERGING goes from");
-        st_println_ctr_20("TWO trains");
-        st_println_ctr_20("to ONE train");
+        st_println_ctr_20("Observa que ");
+        st_println_ctr_20("UNIENDO se pasa");
+        st_println_ctr_20("de DOS trenes");
+        st_println_ctr_20("a UN tren");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -2371,8 +2371,8 @@ void st_update_27()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("The next technique");
-        st_println_ctr_20("is the CROSSOVER");
+        st_println_ctr_20("La siguiente tecnica");
+        st_println_ctr_20("es el CRUCE");
         return;
     }
 
@@ -2468,10 +2468,10 @@ void st_update_27()
     if (tut_frame == T5U) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("Notice that a");
-        st_println_ctr_20("CROSSOVER goes from");
-        st_println_ctr_20("TWO trains to");
-        st_println_ctr_20("TWO mixed trains");
+        st_println_ctr_20("Observa que el ");
+        st_println_ctr_20("CRUCE pasa de");
+        st_println_ctr_20("DOS trenes a");
+        st_println_ctr_20("DOS trenes mezclados");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -2494,9 +2494,9 @@ void st_update_27()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("The last mixing");
-        st_println_ctr_20("technique is the");
-        st_println_ctr_20("COLLISION");
+        st_println_ctr_20("La ultima tecnica");
+        st_println_ctr_20("de mezcla es la");
+        st_println_ctr_20("COLISION");
         return;
     }
 
@@ -2582,7 +2582,7 @@ void st_update_27()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("Uh oh!");
+        st_println_ctr_20("Vaya!");
         return;
     }
 
@@ -2600,7 +2600,7 @@ void st_update_27()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("Let's fix this!");
+        st_println_ctr_20("Vamos a arreglarlo!");
 
         return;
     }
@@ -2649,10 +2649,10 @@ void st_update_27()
     if (tut_frame == T5p) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("That's better! Note");
-        st_println_ctr_20("that COLLISIONS also");
-        st_println_ctr_20("go from TWO trains");
-        st_println_ctr_20("to TWO trains");
+        st_println_ctr_20("Mejor asi! Observa");
+        st_println_ctr_20("que las COLISIONES");
+        st_println_ctr_20("tambien pasan de DOS");
+        st_println_ctr_20("trenes a DOS trenes");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -2671,9 +2671,9 @@ void st_update_27()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 5, 22, 7);
         println("");
-        st_println_ctr_20("One last note:");
-        st_println_ctr_20("you can only mix");
-        st_println_ctr_20("the PRIMARY colours");
+        st_println_ctr_20("Una nota final:");
+        st_println_ctr_20("solo puedes mezclar");
+        st_println_ctr_20("colores PRIMARIOS");
 
         return;
     }
@@ -2682,10 +2682,10 @@ void st_update_27()
     if (tut_frame == T5r) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(3, 14, 24, 6);
-        println_ctr("Any other combination", 22);
-        println_ctr("of colours will", 22);
-        println_ctr("produce a GARBAGE", 22);
-        println_ctr("useless (brown) train", 22);
+        println_ctr("Otras combinaciones de", 22);
+        println_ctr("colores NO primarios", 22);
+        println_ctr("producen un inservible", 22);
+        println_ctr("tren BASURA (marron)", 22);
 
         return;
     }
@@ -2698,40 +2698,43 @@ void st_update_27()
         // print_str("RED    + YELLOW = ORANGE\n");
         // print_str("BLUE   + RED    = PURPLE\n");
         // print_str("YELLOW + BLUE   = GREEN\n");
+        // print_str("ROJO + AMARILLO = NARANJA\n");
+        // print_str("AZUL     + ROJO = MORADO\n");
+        // print_str("AMARILLO + AZUL = VERDE\n");
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(2, 22, 26, 7);
         print_set_pos(3,24);
         print_set_color(CTEXT_RED);
-        print_str("RED");
+        print_str("ROJO");
         print_set_color(CTEXT_WHI);
-        print_str("    + ");
+        print_str(" +");
         print_set_color(CTEXT_YEL);
-        print_str("YELLOW");
+        print_str("AMARILLO");
         print_set_color(CTEXT_WHI);
         print_str(" = ");
         print_set_color(CTEXT_ORA);
-        print_str("ORANGE\n");
+        print_str("NARANJA\n");
         print_set_color(CTEXT_BLU);
-        print_str("BLUE");
+        print_str("AZUL");
         print_set_color(CTEXT_WHI);
-        print_str("   + ");
+        print_str(" +     ");
         print_set_color(CTEXT_RED);
-        print_str("RED");
+        print_str("ROJO");
         print_set_color(CTEXT_WHI);
-        print_str("    = ");
+        print_str(" = ");
         print_set_color(CTEXT_PUR);
-        print_str("PURPLE\n");
+        print_str("MORADO\n");
         print_set_color(CTEXT_YEL);
-        print_str("YELLOW");
+        print_str("AMARILLO");
         print_set_color(CTEXT_WHI);
         print_str(" + ");
         print_set_color(CTEXT_BLU);
-        print_str("BLUE");
+        print_str("AZUL");
         print_set_color(CTEXT_WHI);
-        print_str("   = ");
+        print_str(" = ");
         print_set_color(CTEXT_GRE);
-        print_str("GREEN\n");
+        print_str("VERDE\n");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -2776,7 +2779,7 @@ void st_update_27()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 14, 6);
         println("");
-        println_ctr("Yuck!", 12);
+        println_ctr("Puaj!", 12);
 
         tut_frame ++;
         inc_frame = 0;
@@ -2873,8 +2876,8 @@ void st_update_45()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("This is a");
-        st_println_ctr_20("PAINTER piece");
+        st_println_ctr_20("Esta es una");
+        st_println_ctr_20("casilla PINTORA");
         spmgr_show_tally(st_tut6_tally0);
 
         return;
@@ -2884,9 +2887,9 @@ void st_update_45()
     if (tut_frame == T61) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 24, 22, 5);
-        st_println_ctr_20("See if you can");
-        st_println_ctr_20("guess what it's");
-        st_println_ctr_20("going to do");
+        st_println_ctr_20("A ver si");
+        st_println_ctr_20("adivinas");
+        st_println_ctr_20("lo que hace");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -2934,8 +2937,8 @@ void st_update_45()
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
         println("");
-        st_println_ctr_20("Pretty simple,");
-        st_println_ctr_20("right?");
+        st_println_ctr_20("Muy sencillo,");
+        st_println_ctr_20("no?");
 
         return;
     }
@@ -2944,10 +2947,10 @@ void st_update_45()
     if (tut_frame == T68) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 22, 22, 6);
-        st_println_ctr_20("There are a couple");
-        st_println_ctr_20("more things you");
-        st_println_ctr_20("should know about");
-        st_println_ctr_20("PAINTER pieces");
+        st_println_ctr_20("Hay un par de cosas");
+        st_println_ctr_20("mas que deberias");
+        st_println_ctr_20("saber sobre las");
+        st_println_ctr_20("casillas PINTORAS");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -2964,9 +2967,9 @@ void st_update_45()
 
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 6, 22, 6);
-        st_println_ctr_20("The WHITE sides of");
-        st_println_ctr_20("a PAINTER PIECE are");
-        st_println_ctr_20("the ACTIVE sides");
+        st_println_ctr_20("Los lados BLANCOS de");
+        st_println_ctr_20("una CASILLA PINTORA");
+        st_println_ctr_20("son lados ACTIVOS");
 
         return;
     }
@@ -2975,9 +2978,9 @@ void st_update_45()
     if (tut_frame == T6A) {
         print_set_symbol(BLOCK_OUTER_BORDER);
         print_frame_filled(4, 22, 22, 6);
-        println("");
-        st_println_ctr_20("Every PAINTER piece");
-        st_println_ctr_20("has TWO ACTIVE sides");
+        st_println_ctr_20("Cada casilla PINTORA");
+        st_println_ctr_20("tiene DOS");
+        st_println_ctr_20("lados ACTIVOS");
 
         st_init_btn_next();
         inc_frame = 0;
@@ -3003,10 +3006,11 @@ void st_update_45()
         board_draw();
 
         print_set_symbol(BLOCK_OUTER_BORDER);
-        print_frame_filled(4, 8, 22, 5);
-        st_println_ctr_20("Trains can enter");
-        st_println_ctr_20("either of the");
-        st_println_ctr_20("ACTIVE sides");
+        print_frame_filled(4, 8, 22, 6);
+        st_println_ctr_20("Los trenes pueden");
+        st_println_ctr_20("entrar por");
+        st_println_ctr_20("cualquiera de los");
+        st_println_ctr_20("lados ACTIVOS");
 
         return;
     }

@@ -56,15 +56,15 @@ uword dummy_uword_in_zero_address = 0xCAFE;
 #define SM_BP_W 11
 #define SM_BP_H 6
 
-#define SM_OP_X 19
-#define SM_OP_Y 16
-#define SM_OP_W 11
-#define SM_OP_H 5
-
 #define SM_AB_X 10
 #define SM_AB_Y 16
-#define SM_AB_W 9
+#define SM_AB_W 8
 #define SM_AB_H 5
+
+#define SM_OP_X 18
+#define SM_OP_Y 16
+#define SM_OP_W 12
+#define SM_OP_H 5
 
 GuiButton sm_btn_start;
 GuiButton sm_btn_bonus;
@@ -73,8 +73,8 @@ GuiButton sm_btn_about;
 
 const char* str_TRAINYARD_EXPRESS = "TRAINYARD EXPRESS";
 const char* str_DEVELOPMENT_BUILD = "DEVELOPMENT BUILD";
-const char* str_OPTIONS = "OPTIONS";
-const char* str_ABOUT = "ABOUT";
+const char* str_ABOUT = "INFO";
+const char* str_OPTIONS = "OPCIONES";
 
 ubyte sm_show_bonus_btn;
 
@@ -111,7 +111,7 @@ void p0_sm_enter()
     
         print_set_color(CTEXT_WHI);
         print_set_pos(SM_ST_X + 3, SM_ST_Y + 2);
-        print_str("START THE GAME!");
+        print_str("EMPEZAR JUEGO!");
     }
     else {
         print_set_color(CTEXT_GRE);
@@ -120,19 +120,19 @@ void p0_sm_enter()
     
         print_set_color(CTEXT_WHI);
         print_set_pos(SM_ST2_X + 2, SM_ST2_Y + 2);
-        print_str("START");
-        print_set_pos(SM_ST2_X + 2, SM_ST2_Y + 3);
-        print_str("GAME!");
+        print_str("JUGAR");
+        print_set_pos(SM_ST2_X + 3, SM_ST2_Y + 3);
+        print_str("YA!");
 
         print_set_color(CTEXT_BLU);
         GUIBUTTON_INIT(sm_btn_bonus, SM_BP_X, SM_BP_Y, SM_BP_W, SM_BP_H);
         guibutton_draw(&sm_btn_bonus);
     
         print_set_color(CTEXT_WHI);
-        print_set_pos(SM_BP_X + 3, SM_BP_Y + 2);
-        print_str("BONUS");
-        print_set_pos(SM_BP_X + 2, SM_BP_Y + 3);
+        print_set_pos(SM_BP_X + 2, SM_BP_Y + 2);
         print_str("PUZZLES");
+        print_set_pos(SM_BP_X + 3, SM_BP_Y + 3);
+        print_str("EXTRA");
     }
 
     print_set_color(CTEXT_WHI);
@@ -235,10 +235,10 @@ ubyte sp_prov_unlocked[NUM_PROVS];
 extern GuiButton sg_back_btn;
 extern void sg_init_back_btn();
 
-const char* str_Provinces  = "Provinces";
+const char* str_Provinces  = "Provincias";
 const char* str_4_qmarks   = "?  ?  ?  ?";
 const char* str__slash_    = " / ";
-const char* str__to_unlock = " to unlock";
+const char* str__to_unlock = " para abrir";
 
 void sp_draw_sep_line()
 {
@@ -765,13 +765,13 @@ void p0_sa_enter()
 
     print_set_color(CTEXT_WHI);
     print_set_pos(9, 1);
-    print_str("About Trainyard Express");
+    print_str("Acerca de Trainyard Express");
 
     print_set_color(CTEXT_WHI);
     print_set_pos(1, 8);
-    print_str("Spectrum Next version by David Crespo");
-    print_set_pos(8, 9);
-    print_str("Developed in summer 2022");
+    print_str("Version Spectrum Next por David Crespo");
+    print_set_pos(5, 9);
+    print_str("Desarrollada en verano de 2022");
 
     print_set_color(CTEXT_BLU);
     print_set_pos(9, 11);
@@ -780,12 +780,12 @@ void p0_sa_enter()
     print_str("https://www.youtube.com/DavidPrograma");
 
     print_set_color(CTEXT_WHI);
-    print_set_pos(3, 18);
-    print_str("Original game concept by Matt Rix");
-    print_set_pos(7, 19);
-    print_str("Developed for smartphones");
-    print_set_pos(7, 20);
-    print_str("and first released in 2010");
+    print_set_pos(5, 18);
+    print_str("Concepto original por Matt Rix");
+    print_set_pos(5, 19);
+    print_str("Desarrollado para smartphones");
+    print_set_pos(10, 20);
+    print_str("y publicado en 2010");
 
     print_set_color(CTEXT_BLU);
     print_set_pos(9, 22);
@@ -850,8 +850,8 @@ extern void sg_init_back_btn();
 
 #define SENS_BTN_CNT 3
 GuiButton   so_sens_btns[SENS_BTN_CNT];
-const char* so_sens_txts[SENS_BTN_CNT] = {"LOW", "MED", "HIGH" };
-ubyte       so_sens_w   [SENS_BTN_CNT] = {  5,     5,     6    };
+const char* so_sens_txts[SENS_BTN_CNT] = {"BAJA", "MEDIA", "ALTA" };
+ubyte       so_sens_w   [SENS_BTN_CNT] = {  6,       7,      6    };
 
 void so_draw_sens_btns();
 
@@ -867,17 +867,17 @@ void p0_so_enter()
 
     print_set_color(CTEXT_WHI);
     print_set_pos(9, 1);
-    print_str("Options");
+    print_str("Opciones");
 
-    print_set_pos(14, 6);
-    print_str("Cursor speed");
+    print_set_pos(10, 6);
+    print_str("Velocidad del cursor");
 
     so_draw_sens_btns();
 }
 
 void so_draw_sens_btns()
 {
-    ubyte x = 12;
+    ubyte x = 10;
     ubyte y = 8;
 
     for (ubyte i = 0; i < SENS_BTN_CNT; i++) {
@@ -970,49 +970,49 @@ void p0_si_enter()
     // sg_init_back_btn();
 
     print_set_color(CTEXT_WHI);
-    print_set_pos(5, 7);
-    print_str("Welcome to ");
+    print_set_pos(4, 7);
+    print_str("Bienvenido a ");
 
     print_set_color(CTEXT_GRE);
     print_str("Trainyard Express!");
 
     print_set_color(CTEXT_WHI);
     print_set_pos(2, 10);
-    print_str("In this game you will use the ");
+    print_str("En este juego se utiliza el ");
     print_set_color(CTEXT_GRE);
-    print_set_color(CTEXT_WHI);
     print_str("cursor\n");
-    print_str("for drawing tracks for the trains.\n");
+    print_set_color(CTEXT_WHI);
+    print_str("para dibujar vias para los trenes.\n");
     print_str("\n");
-    print_str("For moving the cursor, you can use:\n");
+    print_str("Para mover el cursor, se puede usar:\n");
     print_str("- ");
     print_set_color(CTEXT_BLU);
-    print_str("Mouse");
+    print_str("Raton");
     print_set_color(CTEXT_WHI);
-    print_str(", using the PS/2 port\n");
+    print_str(", en el puerto PS/2\n");
     print_str("- ");
     print_set_color(CTEXT_BLU);
     print_str("Joystick");
     print_set_color(CTEXT_WHI);
-    print_str(", using Kempston port 1\n");
+    print_str(", en el puerto Kempston 1\n");
     print_str("- ");
     print_set_color(CTEXT_BLU);
-    print_str("Keyboard");
+    print_str("Teclado");
     print_set_color(CTEXT_WHI);
-    print_str(", using the following keys:\n");
+    print_str(", usando las teclas:\n");
     print_str("\n");
     print_set_color(CTEXT_GRE);
-    print_str("QAOP/cursor ............ move cursor\n");
+    print_str("QAOP/flechas .......... mover cursor\n");
     print_set_color(CTEXT_YEL);
-    print_str("Space .............. draw/left click\n");
+    print_str("Espacio ......... dibujar/click izdo\n");
     print_set_color(CTEXT_ORA);
-    print_str("0/delete ........ delete/right click\n");
+    print_str("0/borrar ......... borrar/click dcho\n");
 
     print_set_color(CTEXT_WHI);
     GUIBUTTON_INIT(si_btn_cont, SI_CX, SI_CY, SI_CW, SI_CH);
     guibutton_draw(&si_btn_cont);
     print_set_pos(SI_CX+2, SI_CY+1);
-    print_str("CONTINUE");
+    print_str(" SEGUIR ");
 }
 
 void si_on_btn_cont()
@@ -1158,24 +1158,24 @@ void p0_si_update()
 #include "level.h"
 #include "sound_freqs.h"
 
-#define SE_FR_X 10
+#define SE_FR_X 6
 #define SE_FR_Y 8
-#define SE_FR_W 20
+#define SE_FR_W 28
 #define SE_FR_H 16
 
-#define SE_ST_X 12
+#define SE_ST_X 8
 #define SE_ST_Y 12
-#define SE_ST_W 16
+#define SE_ST_W 24
 #define SE_ST_H 4
 
-#define SE_RP_X 12
+#define SE_RP_X 9
 #define SE_RP_Y 17
-#define SE_RP_W 8
+#define SE_RP_W 11
 #define SE_RP_H 5
 
 #define SE_NE_X 20
 #define SE_NE_Y 17
-#define SE_NE_W 8
+#define SE_NE_W 11
 #define SE_NE_H 5
 
 GuiButton se_btn_replay;
@@ -1196,8 +1196,9 @@ void p0_se_enter()
 
     print_set_color(CTEXT_GRE);
 
-    print_set_pos(SE_FR_X + 3, SE_FR_Y + 2);
-    print_str("YOU SOLVED IT!");
+    print_set_pos(SE_FR_X + 7, SE_FR_Y + 2);
+    // print_str("YOU SOLVED IT!");
+    print_str("LO HAS RESUELTO!");
 
     if (sg_score_earned) {
         print_set_color(CTEXT_WHI);
@@ -1205,8 +1206,9 @@ void p0_se_enter()
         print_frame(SE_ST_X, SE_ST_Y, SE_ST_W, SE_ST_H);
 
         print_set_pos(SE_ST_X + 2, SE_ST_Y + 1);
-        print_str("STARS EARNED:");
-        print_set_pos(SE_ST_X + 7, SE_ST_Y + 2);
+        // print_str("STARS EARNED:");
+        print_str("ESTRELLAS GANADAS: ");
+        // print_set_pos(SE_ST_X + 7, SE_ST_Y + 2);
         print_set_color(CTEXT_GRE);
         print_dec_byte(lev_stars);
         print_block(BLOCK_STAR);
@@ -1217,26 +1219,26 @@ void p0_se_enter()
     guibutton_draw(&se_btn_replay);
 
     print_set_color(CTEXT_WHI);
-    print_set_pos(SE_RP_X + 1, SE_RP_Y + 2);
-    print_str("REPLAY");
+    print_set_pos(SE_RP_X + 2, SE_RP_Y + 2);
+    print_str("REPETIR");
 
     print_set_color(CTEXT_YEL);
     GUIBUTTON_INIT(se_btn_next, SE_NE_X, SE_NE_Y, SE_NE_W, SE_NE_H);
     guibutton_draw(&se_btn_next);
 
     print_set_color(CTEXT_WHI);
-    print_set_pos(SE_NE_X + 2, SE_NE_Y + 2);
+    print_set_pos(SE_NE_X + 1, SE_NE_Y + 2);
 
     if (sc_is_level_unlocked(sg_level_idx+1)) {
-        print_str("NEXT");
+        print_str("SIGUIENTE");
     }
     else {
-        print_str("MENU");
+        print_str("  MENU  ");
 
         if (pd_score < STARS_IN_BONUS_LEVELS) {
             print_set_pos(0, SE_FR_Y + SE_FR_H + 2);
-            println_ctr("Next level is locked, please", 40);
-            println_ctr("unlock previous level(s) first", 40);
+            println_ctr("Siguiente nivel bloqueado,", 40);
+            println_ctr("desbloquea niveles previos", 40);
         }
     }
 
@@ -1345,19 +1347,19 @@ void p0_sv_enter()
     print_set_pos(SV_FR_X + 1, SV_FR_Y + 2);
 
     print_set_color(CTEXT_WHI);
-    println_ctr("Congratulations,", SV_FR_W-2);
+    println_ctr("Felicidades,", SV_FR_W-2);
     println("");
     print_set_color(CTEXT_YEL);
-    println_ctr("\x1f YOU BEAT THE GAME! \x1f", SV_FR_W-2);
+    println_ctr("\x1f HAS GANADO EL JUEGO! \x1f", SV_FR_W-2);
     println("");
     print_set_color(CTEXT_WHI);
-    println_ctr("(nice job, it's not easy)", SV_FR_W-2);
+    println_ctr("(bien hecho, no es facil)", SV_FR_W-2);
 
     println("");
     //           0123456789012345678901234567
-    println_ctr("Now you can play the"    , SV_FR_W-2);
-    println_ctr("bonus puzzles, available", SV_FR_W-2);
-    println_ctr("now from main menu"      , SV_FR_W-2);
+    println_ctr("Ahora puedes jugar los"    , SV_FR_W-2);
+    println_ctr("puzzles extra, desde", SV_FR_W-2);
+    println_ctr("el menu principal"      , SV_FR_W-2);
 
     print_set_color(CTEXT_BLU);
     GUIBUTTON_INIT(sv_btn_replay, SV_RP_X, SV_RP_Y, SV_RP_W, SV_RP_H);
@@ -1365,7 +1367,7 @@ void p0_sv_enter()
 
     print_set_color(CTEXT_WHI);
     print_set_pos(SV_RP_X + 3, SV_RP_Y + 2);
-    print_str("MAIN  MENU");
+    print_str("IR AL MENU");
 
     sv_ts = 0;
 }
@@ -1469,17 +1471,17 @@ void p0_sw_enter()
     print_set_pos(SW_FR_X + 1, SW_FR_Y + 2);
 
     print_set_color(CTEXT_WHI);
-    println_ctr("Congratulations,", SW_FR_W-2);
+    println_ctr("Felicidades,", SW_FR_W-2);
     println("");
     print_set_color(CTEXT_YEL);
-    println_ctr("\x1f\x1f YOU BEAT THE BONUS PUZZLES! \x1f\x1f", SW_FR_W-2);
+    println_ctr("\x1f\x1f SUPERASTE LOS PUZZLES EXTRA! \x1f\x1f", SW_FR_W-2);
     println("");
     print_set_color(CTEXT_WHI);
 
     println("");
     println("");
     //           0123456789012345678901234567
-    println_ctr("YOU ARE GREAT."    , SW_FR_W-2);
+    println_ctr("ERES GENIAL."    , SW_FR_W-2);
 
     print_set_color(CTEXT_BLU);
     GUIBUTTON_INIT(sw_btn_replay, SW_RP_X, SW_RP_Y, SW_RP_W, SW_RP_H);
@@ -1487,7 +1489,7 @@ void p0_sw_enter()
 
     print_set_color(CTEXT_WHI);
     print_set_pos(SW_RP_X + 3, SW_RP_Y + 2);
-    print_str("MAIN  MENU");
+    print_str("IR AL MENU");
 
     sw_ts = 0;
 }

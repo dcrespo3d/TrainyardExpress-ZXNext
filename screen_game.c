@@ -68,8 +68,8 @@ void sg_init_back_btn()
     print_set_color(CTEXT_WHI);
     GUIBUTTON_INIT(sg_back_btn, BK_BX, BK_BY, BK_BW, BK_BH);
     guibutton_draw(&sg_back_btn);
-    print_set_pos(BK_BX + 2, BK_BY + 1);
-    print_str("BACK");
+    print_set_pos(BK_BX + 1, BK_BY + 1);
+    print_str("VOLVER");
 }
 
 void sg_fix_back_btn()
@@ -99,9 +99,9 @@ void sg_on_btn_back()
 GuiButton sg_btn_undo;
 GuiButton sg_btn_delete;
 
-#define ST_UX SG_BX+1
+#define ST_UX SG_BX
 #define ST_UY SG_BY+10
-#define ST_UW SG_BW-2
+#define ST_UW SG_BW
 #define ST_UH 3
 
 void sg_init_undo_clear()
@@ -144,13 +144,13 @@ void sg_update_undo_delete()
 {
     guibutton_draw(&sg_btn_undo);
     print_set_color(CTEXT_WHI);
-    print_set_pos(ST_UX+2, ST_UY+1);
-    print_str("UNDO");
+    print_set_pos(ST_UX+1, ST_UY+1);
+    print_str("DESHACER");
 
     guibutton_draw(&sg_btn_delete);
     print_set_color(CTEXT_RED);
-    print_set_pos(ST_UX+1, ST_UY+4);
-    print_str("DELETE");
+    print_set_pos(ST_UX+2, ST_UY+4);
+    print_str("BORRAR");
 }
 
 void sg_update_status_panel()
@@ -161,26 +161,26 @@ void sg_update_status_panel()
     print_set_color(CTEXT_WHI);
     guibutton_draw_fine(&sg_status_panel);
     print_set_pos(ST_BX + 2, ST_BY + 2);
-    print_str("STATUS");
+    print_str("ESTADO");
 
     if (level_state == LEV_STATE_RUNNING) {
         print_set_color(CTEXT_GRE);
-        print_set_pos(ST_BX + 3, ST_BY + 3);
-        print_str("GOOD");
+        print_set_pos(ST_BX + 4, ST_BY + 3);
+        print_str("OK");
         return;
     }
 
     if (level_state == LEV_STATE_CRASHED) {
         print_set_color(CTEXT_RED);
-        print_set_pos(ST_BX + 2, ST_BY + 3);
-        print_str("CRASHED");
+        print_set_pos(ST_BX + 1, ST_BY + 3);
+        print_str("COLISION");
         return;
     }
 
     if (level_state == LEV_STATE_FINISHED) {
         print_set_color(CTEXT_BLU);
         print_set_pos(ST_BX + 1, ST_BY + 3);
-        print_str("FINISHED");
+        print_str("SUPERADO");
         return;
     }
 }
@@ -214,8 +214,8 @@ void sg_init_vel_btns()
     print_set_color(CTEXT_WHI);
     print_set_pos(SP_BX+2, SP_BY+3);
     print_str("-");
-    print_set_pos(SP_BX+2, SP_BY+1);
-    print_str("SPEED:");
+    print_set_pos(SP_BX+1, SP_BY+1);
+    print_str("RAPIDEZ:");
     print_set_pos(SP_BX+7, SP_BY+3);
     print_str("+");
     sg_update_speed_value();
@@ -262,9 +262,9 @@ void sg_update_ss_state()
     if (level_state == LEV_STATE_DESIGN) {
         print_set_color(CTEXT_WHI);
         print_set_pos(SS_BX + 1, SS_BY + 1);
-        print_str(" START  ");
+        print_str("ARRANCAR");
         print_set_pos(SS_BX + 1, SS_BY + 2);
-        print_str(" TRAINS ");
+        print_str(" TRENES ");
 
         guibutton_clear(&sg_status_panel);
         sg_update_undo_delete();
@@ -272,9 +272,9 @@ void sg_update_ss_state()
     else {
         print_set_color(CTEXT_WHI);
         print_set_pos(SS_BX + 1, SS_BY + 1);
-        print_str("BACK TO ");
+        print_str("VOLVER A");
         print_set_pos(SS_BX + 1, SS_BY + 2);
-        print_str("DRAWING ");
+        print_str(" DIBUJO ");
 
         guibutton_clear(&sg_status_panel);
         sg_update_status_panel();
