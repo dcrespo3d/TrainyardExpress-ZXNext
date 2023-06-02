@@ -4,6 +4,8 @@ You can download a binary [here](https://davidprograma.itch.io/trainyard-express
 
 ![capture](https://img.itch.zone/aW1hZ2UvMTY4NDgxOC85OTMwMTcyLnBuZw==/347x500/0c2cK2.png)
 
+UPDATE: spanish translation available in [the spanish branch](https://github.com/dcrespo3d/TrainyardExpress-ZXNext/tree/spanish).
+
 ## Disclaimer
 
 This code is provided as-is, as I wanted to release the source code as there is not a lot of ZX Spectrum Next games released with full sources.
